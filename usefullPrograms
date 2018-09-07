@@ -1,0 +1,14 @@
+// Random ID Generator 
+// For true random ID, include <ctime> and add srand(time(NULL)) to main
+
+string rand_ID()
+{
+	string charIndex = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	string ID = "";
+	int IDlength = 20;
+
+	for (int i = 0; i < IDlength; i++)
+		ID += charIndex[rand() % charIndex.length()];
+	return ID;
+}
+
